@@ -202,14 +202,18 @@ def memories_delete(key):
     return jsonify({"error": "Memory not found."}), 404
 
 
+# Create database when the app starts
+create_database()
+
+
 # ------------------------------------------
 # START WEBSITE
 # ------------------------------------------
 
 if __name__ == "__main__":
-    create_database()
 
     print("CORTEX NEXUS website is starting...")
     print("Open http://127.0.0.1:5000 in your browser")
 
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
