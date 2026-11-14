@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORTEX NEXUS | AI Command Center</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">$∞</div>
+            <div>
+                <h2>CORTEX<span>.</span></h2>
+                <small>NEXUS INTELLIGENCE</small>
+            </div>
+        </div>
+
+        <div class="nav-label">WORKSPACE</div>
+        <nav>
+            <button class="nav-item active" data-page="dashboard">
+                <span>⌂</span> Overview
+            </button>
+            <button class="nav-item" data-page="chat">
+                <span>◉</span> AI Assistant
+            </button>
+            <button class="nav-item" data-page="memory">
+                <span>◈</span> Memory Vault
+            </button>
+            <button class="nav-item" data-page="missions">
+                <span>✧</span> Mission Control
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-card">
+                <div class="system-heading">
+                    <span class="status-dot"></span>
+                    SYSTEM ONLINE
+                </div>
+                <p>Qwen3 · SQLite · Flask</p>
+                <div class="system-line"><span></span></div>
+                <small>LOCAL AI ENVIRONMENT</small>
+            </div>
+            <div class="profile">
+                <div class="avatar">C</div>
+                <div>
+                    <strong>Cortex User</strong>
+                    <small>Personal workspace</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-area">
+        <header class="topbar">
+            <div>
+                <div class="breadcrumb">WORKSPACE <span>/</span> <b id="breadcrumb-name">OVERVIEW</b></div>
+                <h3 id="top-title">Your command center</h3>
+            </div>
+            <div class="top-actions">
+                <div class="online-label"><span class="status-dot"></span> AI SYSTEM ACTIVE</div>
+                <div class="top-avatar">C</div>
+            </div>
+        </header>
+
+        <div class="content">
+
+            <!-- DASHBOARD -->
+            <section class="page active" id="dashboard">
+                <div class="welcome-row">
+                    <div>
+                        <div class="eyebrow">✦ YOUR PERSONAL INTELLIGENCE SPACE</div>
+                        <h1>Think beyond.<br><span>Build what's next.</span></h1>
+                        <p class="welcome-text">Welcome to CORTEX NEXUS. Your AI-powered space to learn, think and create.</p>
+                    </div>
+
+                    <div class="core-card">
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+                        <div class="core-glow">
+                            <div class="core-symbol">$∞</div>
+                        </div>
+                        <div class="core-caption">CORTEX CORE</div>
+                        <div class="core-state"><span class="status-dot"></span> READY TO THINK</div>
+                    </div>
+                </div>
+
+                <div class="section-heading">
+                    <div>
+                        <div class="eyebrow">YOUR ENVIRONMENT</div>
+                        <h2>System overview</h2>
+                    </div>
+                    <span class="live-tag">● LIVE STATUS</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-top"><span>AI ENGINE</span><span class="stat-icon purple">✳</span></div>
+                        <h3>Qwen3 1.7B</h3>
+                        <p><span class="status-dot"></span> Local model connected</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-top"><span>LONG-TERM MEMORY</span><span class="stat-icon cyan">◈</span></div>
+                        <h3>SQLite</h3>
+                        <p><span class="status-dot"></span> Persistent storage</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-top"><span>BACKEND</span><span class="stat-icon blue">⌘</span></div>
+                        <h3>Flask API</h3>
+                        <p><span class="status-dot"></span> Server running</p>
+                    </div>
+                </div>
+
+                <div class="section-heading quick-heading">
+                    <div>
+                        <div class="eyebrow">GET STARTED</div>
+                        <h2>Choose your next move</h2>
+                    </div>
+                </div>
+
+                <div class="quick-grid">
+                    <button class="quick-card" data-open="chat">
+                        <div class="quick-icon purple">◉</div>
+                        <h3>Talk to CORTEX</h3>
+                        <p>Ask questions, explore ideas and solve problems with your AI assistant.</p>
+                        <span>START A CONVERSATION ↗</span>
+                    </button>
+                    <button class="quick-card" data-open="memory">
+                        <div class="quick-icon cyan">◈</div>
+                        <h3>Explore Memory</h3>
+                        <p>Store important information and let CORTEX recall it later.</p>
+                        <span>OPEN MEMORY VAULT ↗</span>
+                    </button>
+                    <button class="quick-card" data-open="missions">
+                        <div class="quick-icon blue">✧</div>
+                        <h3>Mission Control</h3>
+                        <p>Organize your learning goals and track your progress.</p>
+                        <span>VIEW MISSIONS ↗</span>
+                    </button>
+                </div>
+
+                <div class="quote-card">
+                    <span class="quote-mark">“</span>
+                    <div>
+                        <p>Intelligence is not just having answers. It's knowing what to build next.</p>
+                        <small>THE CORTEX MINDSET</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAT -->
+            <section class="page" id="chat">
+                <div class="page-intro">
+                    <div class="eyebrow">CONVERSATIONAL INTELLIGENCE</div>
+                    <h1>Talk to <span>CORTEX.</span></h1>
+                    <p>Your local AI assistant, powered by Qwen3.</p>
+                </div>
+
+                <div class="chat-panel">
+                    <div class="chat-header">
+                        <div class="chat-bot-icon">✳</div>
+                        <div><strong>CORTEX AI</strong><small><span class="status-dot"></span> Connected to local model</small></div>
+                        <button id="clear-chat" class="subtle-button">NEW CHAT ↻</button>
+                    </div>
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="message assistant-message">
+                            <div class="message-avatar">✳</div>
+                            <div class="message-content">
+                                <small>CORTEX · NOW</small>
+                                <p>Hello! I'm CORTEX. What would you like to learn or build today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-input-area">
+                        <textarea id="chat-input" rows="1" placeholder="Ask CORTEX anything..."></textarea>
+                        <button id="send-button" class="send-button">↑</button>
+                    </div>
+                    <div class="input-hint">ENTER TO SEND · SHIFT + ENTER FOR NEW LINE</div>
+                </div>
+            </section>
+
+            <!-- MEMORY -->
+            <section class="page" id="memory">
+                <div class="page-intro">
+                    <div class="eyebrow">PERSISTENT KNOWLEDGE STORAGE</div>
+                    <h1>Memory <span>Vault.</span></h1>
+                    <p>Information you save here can be recalled by CORTEX.</p>
+                </div>
+
+                <div class="memory-create">
+                    <div>
+                        <div class="eyebrow">ADD TO YOUR MEMORY</div>
+                        <h2>Save something important</h2>
+                    </div>
+                    <div class="memory-form">
+                        <input id="memory-key" placeholder="Memory name (e.g. course)">
+                        <input id="memory-value" placeholder="Information (e.g. Computer Science)">
+                        <button id="save-memory" class="primary-button">+ SAVE MEMORY</button>
+                    </div>
+                    <p id="memory-status" class="form-status"></p>
+                </div>
+
+                <div class="section-heading">
+                    <div><div class="eyebrow">YOUR STORED INFORMATION</div><h2>Memory collection</h2></div>
+                    <button id="refresh-memory" class="subtle-button">↻ REFRESH</button>
+                </div>
+                <div id="memory-list" class="memory-list"></div>
+            </section>
+
+            <!-- MISSIONS -->
+            <section class="page" id="missions">
+                <div class="page-intro">
+                    <div class="eyebrow">PERSONAL GROWTH PROTOCOL</div>
+                    <h1>Mission <span>Control.</span></h1>
+                    <p>Turn your learning goals into small, achievable missions.</p>
+                </div>
+
+                <div class="mission-banner">
+                    <div>
+                        <div class="eyebrow">YOUR NEXT LEVEL STARTS HERE</div>
+                        <h2>Learn. Practice. Improve.</h2>
+                        <p>Build your skills one mission at a time.</p>
+                    </div>
+                    <div class="mission-star">✧</div>
+                </div>
+
+                <div class="mission-create">
+                    <h2>Create a mission</h2>
+                    <div class="mission-form">
+                        <input id="mission-input" placeholder="e.g. Practice Python for 30 minutes">
+                        <button id="add-mission" class="primary-button">+ ADD MISSION</button>
+                    </div>
+                </div>
+
+                <div class="section-heading">
+                    <div><div class="eyebrow">YOUR OBJECTIVES</div><h2>Learning missions</h2></div>
+                </div>
+                <div id="mission-list" class="mission-list"></div>
+            </section>
+
+            <footer>
+                <span>✳ CORTEX NEXUS</span>
+                <span>BUILT FOR THINKERS & BUILDERS · LOCAL AI EDITION</span>
+            </footer>
+        </div>
+    </main>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
